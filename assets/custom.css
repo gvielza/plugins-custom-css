@@ -1,64 +1,55 @@
-/* Mi CSS personalizado
-   Podés editar este archivo desde:
-   Ajustes → Mi Custom CSS
-*/
-
-body {
-  overflow-x: hidden;
-
-}
-[class*="header-layout-side"] .af-middle-header {
-background-color:black;
-}
-/**/
-
-.walkerwp-container {
-    padding: 0 0px;
-}
-.walkerwp-wraper.inner-page-subheader.normal-subheader .walkerwp-grid-12 {
-    padding: 10px;
-}
-
-.aft-popular-tags{
-	display: none;
-}
-.post-item-metadata.entry-meta.author-links {
-  display: none;
-}
-.custom-menu-link a {
-  font-size: 0;
-}
-
-.custom-menu-link a::after {
-  content: "";
-  display: inline-block;
-  width: 140px;
-  height: 40px;
-  background-image: url('https://infonea.geo-hosting.com/wp-content/uploads/2026/02/usbana-radio.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  vertical-align: middle;
-}
-
 @media (max-width: 768px){
 
-  /* separa logo del clima */
+  /* =========================
+     1. Tamaño del logo
+     ========================= */
+  .site-logo img,
+  .custom-logo {
+    max-height: 40px;
+    width: auto;
+  }
+
+  /* =========================
+     2. Separación logo → clima
+     ========================= */
   .site-logo,
   .custom-logo-link {
     margin-bottom: 12px;
   }
 
-  /* agrega aire arriba del clima */
+  /* =========================
+     3. Aire arriba del clima
+     ========================= */
   .nr-weather-widget {
     margin-top: 30px;
-	
   }
-	 /* aire abajo del clima */
+
+  /* =========================
+     4. Aire debajo del clima
+     (sin romper layout)
+     ========================= */
   .af-middle-header,
   .container-wrapper {
     padding-bottom: 20px;
   }
 
+}
+@media (max-width: 768px){
+
+  /* quitar margen lateral del contenedor principal */
+  body,
+  #page,
+  .site,
+  .container-wrapper,
+  .af-main-banner-wrapper,
+  .af-container,
+  .container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
 
 }
