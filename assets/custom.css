@@ -4,18 +4,61 @@
 */
 
 body {
-  /* ejemplo */
+  overflow-x: hidden;
+
+}
+[class*="header-layout-side"] .af-middle-header {
+background-color:black;
+}
+/**/
+
+.walkerwp-container {
+    padding: 0 0px;
+}
+.walkerwp-wraper.inner-page-subheader.normal-subheader .walkerwp-grid-12 {
+    padding: 10px;
 }
 
+.aft-popular-tags{
+	display: none;
+}
+.post-item-metadata.entry-meta.author-links {
+  display: none;
+}
+.custom-menu-link a {
+  font-size: 0;
+}
 
-/* JS apuntes*/
+.custom-menu-link a::after {
+  content: "";
+  display: inline-block;
+  width: 140px;
+  height: 40px;
+  background-image: url('https://infonea.geo-hosting.com/wp-content/uploads/2026/02/usbana-radio.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
 
-/*
-const element = document.getElementsByTagName("li");
-element[23].style.visibility="hidden";
-document.getElementsByClassName('related-post-heading box-title')[0].firstElementChild.innerHTML = 'Publicaciones Relacionadas';
-document.querySelector('.nav-subtitle').innerHTML = 'Anterior';
-const a=document.getElementsByClassName('nav-subtitle');
-a[1].innerHTML='Siguiente';
+@media (max-width: 768px){
 
-*/
+  /* separa logo del clima */
+  .site-logo,
+  .custom-logo-link {
+    margin-bottom: 12px;
+  }
+
+  /* agrega aire arriba del clima */
+  .nr-weather-widget {
+    margin-top: 30px;
+	
+  }
+	 /* aire abajo del clima */
+  .af-middle-header,
+  .container-wrapper {
+    padding-bottom: 20px;
+  }
+
+
+}
